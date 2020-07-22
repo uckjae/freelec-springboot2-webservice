@@ -6,12 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Getter
 @NoArgsConstructor
 @Entity
-public class User extends BaseTimeEntity implements Serializable {
+public class User extends BaseTimeEntity /*implements Serializable*/ {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +21,7 @@ public class User extends BaseTimeEntity implements Serializable {
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column
     private String picture;
 
     @Enumerated(EnumType.STRING)

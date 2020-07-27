@@ -38,6 +38,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         System.out.println(user.getEmail());
         System.out.println(attributes.getAttributes());
         System.out.println(attributes.getNameAttributeKey());
+        System.out.println(attributes.getAttributes().getClass());
         System.out.println("*****httpSession.setAttribute");
         httpSession.setAttribute("user",user);
         User user1 = (User)httpSession.getAttribute("user");
